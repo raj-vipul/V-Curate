@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>V Curate</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 5px;
+      background-color: whitesmoke;
+      color: white;
+      width: 200px;
+    }
+    #container {
+       margin-left: 3px;
+    width: 22.7rem;
+}
+#content{
+ 
+  padding: 5px;
+}
+#header,#header>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo {
+    font-size: 1.3rem;
+}
+
+#logo>img {
+    margin-right: .5rem;
+}
+#logo>img {
+    height: 1.4rem;
+    width: 1.4rem;
+}
+span{
+      color: black;
+      font-weight: bold;
+    }
+    h1 {
+    font-size: 1.5em;
+    color: #f40c46;
+    }
+    h3 {
+      color: #f40c46;
+      text-align: center;
+    }
+    #bookmarkButton, #downloadNotes {
+      background-color: #f40c46;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: block;
+      margin: 10px auto;
+      text-align: center;
+      width: 90%;
+    }
+    #bookmarkButton:hover, #downloadNotes:hover {
+      background-color: black;
+      transform: scale(1.06);
+    }
+    .bookmark {
+      display: flex;
+      flex-direction: column;
+      background-color: black;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      padding: 10px;
+    }
+    .bookmark a {
+      color: #f40c46;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .note-text {
+      width: 100%;
+      margin-top: 5px;
+      padding: 5px;
+      border-radius: 4px;
+      resize: none;
+      font-size: 0.9em;
+    }
+    .delete-btn {
+      background: none;
+      color: #f40c46;
+      border: none;
+      cursor: pointer;
+      margin-top: 5px;
+      align-self: flex-end;
+    }
+    .delete-btn:hover {
+      color: #f40c46;
+    }
+
+    #downloadBtn , #saveButton{
+       background-color: #f40c46;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: block;
+      margin: 10px auto;
+      text-align: center;
+      width: 90%;
+    }
+
+    #downloadBtn:hover, #saveButton:hover{
+       background-color: black;
+      transform: scale(1.06);
+    }
+
+    button {
+      margin-top: 10px;
+      margin-left: 55px;
+      padding: 10px;
+      background-color: #f40c46;
+      color: black;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: black;
+    }
+    label{
+      color: black;
+      margin-bottom: 1px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="content">
+        <div id="header">
+            <div id="logo">
+                <img src="icon.png" alt="logo">
+                <div style="color: #f40c46; font-weight: bold; text-align: center;"><span>V</span> Curate</div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <h3>Bookmarks<span> &</span>  Notes</h3>
+  <div id="bookmarks"></div>
+  <textarea id="noteInput" class="note-text" placeholder="Write your notes here..."></textarea>
+  <button id="bookmarkButton">Save Current Timestamp</button>
+  <button id="downloadNotes">Download Notes</button> 
+
+  <h4 style="color: #f40c46;">You<span>Tube</span> Video Downloader</h4>
+  <input type="text" id="url" placeholder="Enter YouTube URL" style="width: 100%;" />
+  <button id="downloadBtn">Download</button>
+<div id="message" style="margin-top: 10px; color: #f40c46;"></div>
+
+  <h1>You<span>Tube</span> Customizer</h1>
+    <div>
+        <label> 
+            <input type="checkbox" id="hideLiveChat"> Hide Live Chat
+        </label><br>
+        <label>
+            <input type="checkbox" id="hideHomeFeed"> Hide Home Feed
+        </label><br>
+        <label>
+            <input type="checkbox" id="hideNotifications"> Hide Notifications
+        </label><br>
+        <label>
+          <input type="checkbox" id="hideComments"> Hide Comments Section
+        </label><br>
+        <label>
+          <input type="checkbox" id="hideSidebar"> Hide Recommended Videos
+        </label><br>
+        <label>
+        <button id="saveButton">Save Changes</button>
+    </div>
+
+  
+  <script src="popup.js"></script>
+</body>
+</html>

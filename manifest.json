@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "V Curate",
+  "version": "1.2",
+  "description": "Bookmark YouTube timestamps, Take notes,Download YouTube videos using yt-dlp,Simplify YouTube, Download notes,Automatically skips YouTube ads as soon as the skip button appears and autoplay/pause on screen visibility changes.",
+  "permissions": ["activeTab", "storage", "scripting", "tabs"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon":{
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
